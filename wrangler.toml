@@ -1,4 +1,4 @@
-name = "taiwanfighter-benchmark"
+name = "gotaiwanfighter"
 main = "deploy/cloudflare/worker.mjs"
 compatibility_date = "2026-09-13"
 
