@@ -1,0 +1,18 @@
+{
+  "night": {
+    "name": "永安街口",
+    "texture": "res://assets/stage.png",
+    "floor": 585,
+    "left": 90,
+    "right": 1190,
+    "ambience": "rain"
+  },
+  "dawn": {
+    "name": "收班時分",
+    "texture": "res://assets/stage.png",
+    "floor": 585,
+    "left": 90,
+    "right": 1190,
+    "ambience": "quiet"
+  }
+}

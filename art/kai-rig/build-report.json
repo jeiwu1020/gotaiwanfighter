@@ -1,0 +1,294 @@
+{
+  "source_sha256": "cd690f8ad20ad791113454a53d796e9a33f41b37befe0017044551c05f53a1e5",
+  "parts": [
+    {
+      "role": "head",
+      "source_window": [
+        0,
+        0,
+        256,
+        488
+      ],
+      "bounds": [
+        1,
+        90,
+        256,
+        428
+      ],
+      "pixels": [
+        255,
+        338
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "964ba453d661eafe13dead3bf07e40570c3375a5875d75f415e66925601bf494"
+    },
+    {
+      "role": "torso",
+      "source_window": [
+        256,
+        0,
+        256,
+        488
+      ],
+      "bounds": [
+        0,
+        58,
+        256,
+        474
+      ],
+      "pixels": [
+        256,
+        416
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "9b97339e4b46d4b8bc0179d584de6138c97149642504873dbfe4ea1b39da1102"
+    },
+    {
+      "role": "pack",
+      "source_window": [
+        512,
+        0,
+        256,
+        488
+      ],
+      "bounds": [
+        0,
+        128,
+        256,
+        448
+      ],
+      "pixels": [
+        256,
+        320
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "871b51c5fa28256c7df7365fbb1d3e31db9c29035406f05a8a64f5268799a2f8"
+    },
+    {
+      "role": "pelvis",
+      "source_window": [
+        768,
+        0,
+        256,
+        488
+      ],
+      "bounds": [
+        0,
+        174,
+        245,
+        457
+      ],
+      "pixels": [
+        245,
+        283
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "36a61ba720ed47064f48b3a545cbbdd213e54f687e0093fcb2a9d9cc07a1efc7"
+    },
+    {
+      "role": "rear_upper_arm",
+      "source_window": [
+        0,
+        488,
+        256,
+        430
+      ],
+      "bounds": [
+        48,
+        21,
+        200,
+        361
+      ],
+      "pixels": [
+        152,
+        340
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "ae0008e2de14a8318dfd921fbc7a1dc19e9b6f3ef05cf8eedaa9f6baf883bfd1"
+    },
+    {
+      "role": "rear_forearm",
+      "source_window": [
+        256,
+        488,
+        256,
+        430
+      ],
+      "bounds": [
+        58,
+        40,
+        184,
+        411
+      ],
+      "pixels": [
+        126,
+        371
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "99aa1a4798d1116528b1985b1e07f83f2811945932a402bd9c135e7c9bfcd516"
+    },
+    {
+      "role": "front_upper_arm",
+      "source_window": [
+        512,
+        488,
+        256,
+        430
+      ],
+      "bounds": [
+        60,
+        19,
+        224,
+        381
+      ],
+      "pixels": [
+        164,
+        362
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "7e29fef8c0bd5c9126480a04a6731f45c1c73dcf90188c3bea6aa2422fab17c0"
+    },
+    {
+      "role": "front_forearm",
+      "source_window": [
+        768,
+        488,
+        256,
+        430
+      ],
+      "bounds": [
+        66,
+        40,
+        182,
+        414
+      ],
+      "pixels": [
+        116,
+        374
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "99cd570580762acdb56d73a3ed8e50606210c76165989e1b38b4e7922d5f1cdb"
+    },
+    {
+      "role": "rear_thigh",
+      "source_window": [
+        0,
+        918,
+        256,
+        618
+      ],
+      "bounds": [
+        23,
+        10,
+        209,
+        551
+      ],
+      "pixels": [
+        186,
+        373
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "cfbdaa9c79ec5fcede59a3dbfd69773bdd78c14a729cd5eba4c142e664436af6"
+    },
+    {
+      "role": "rear_shin",
+      "source_window": [
+        256,
+        918,
+        256,
+        618
+      ],
+      "bounds": [
+        20,
+        34,
+        256,
+        533
+      ],
+      "pixels": [
+        236,
+        499
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "770e7d3eaf7491f0410d95f3080272a0edc636f15b2269cb07b2d3feebb41292"
+    },
+    {
+      "role": "front_thigh",
+      "source_window": [
+        512,
+        918,
+        256,
+        618
+      ],
+      "bounds": [
+        31,
+        9,
+        220,
+        555
+      ],
+      "pixels": [
+        189,
+        376
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "f51de860a6492df90e80adb36edd1f87d40d828161d9ac8a76b55e31a0fad226"
+    },
+    {
+      "role": "front_shin",
+      "source_window": [
+        768,
+        918,
+        256,
+        618
+      ],
+      "bounds": [
+        31,
+        34,
+        240,
+        550
+      ],
+      "pixels": [
+        209,
+        516
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "e723c2bb350d7a96b35a14e9693c4d20a21e223d862c3b4b6eaa803c5f78a4af"
+    }
+  ],
+  "method": "green dominance alpha, deterministic individual crops; one source atlas; rig lengths independent of image bounds"
+}

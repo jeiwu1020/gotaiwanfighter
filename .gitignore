@@ -1,0 +1,65 @@
+# Godot editor/import state
+.godot/
+*.import
+
+# Exported products and runtime evidence
+build/
+builds/
+dist/
+export/
+exports/
+artifacts/
+logs/
+tmp/
+temp/
+cache/
+*.exe
+*.pck
+*.wasm
+*.dmp
+*.tmp
+
+# Local engine, SDK, templates and installed Python packages
+tools/godot/
+tools/export-templates/
+tools/pythonpackages/
+tools/*.zip
+tools/*.tpz
+
+# Read-only Phaser benchmark and other reference archives
+reference/
+PHASER_REFERENCE/
+taiwanfighter-phaser-reference-for-astra.zip
+
+# 0.1 superseded prototype source and assets; retained locally for history only
+assets/kai.png
+assets/lucy.png
+assets/roster.json
+assets/chroma.gdshader
+assets/chroma.gdshader.uid
+src/combat.gd
+src/combat.gd.uid
+src/cpu.gd
+src/cpu.gd.uid
+src/fighter_view.gd
+src/fighter_view.gd.uid
+src/hud.gd
+src/hud.gd.uid
+src/main.gd
+src/main.gd.uid
+src/sound.gd
+src/sound.gd.uid
+tests/combat_test.gd
+tests/combat_test.gd.uid
+tests/edge_test.gd
+tests/edge_test.gd.uid
+tests/input_test.gd
+tests/input_test.gd.uid
+tests/render_smoke.gd
+tests/render_smoke.gd.uid
+tests/scene_test.gd
+tests/scene_test.gd.uid
+docs/ARCHITECTURE.md
+docs/ART_PIPELINE.md
+docs/PARITY_MATRIX.md
+docs/QA_REPORT.md

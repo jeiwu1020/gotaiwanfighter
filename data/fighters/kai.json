@@ -1,0 +1,476 @@
+{
+  "id": "kai",
+  "name": "阿凱",
+  "english": "KAI",
+  "speed": 310,
+  "jump_speed": 690,
+  "accent": "46d9ec",
+  "style": "疾速突進・確認連段",
+  "preferred": 125,
+  "moves": {
+    "punch": {
+      "name": "巷口直拳",
+      "animation": "PUNCH",
+      "stance": "stand",
+      "startup": 5,
+      "active": 3,
+      "recovery": 10,
+      "damage": 45,
+      "level": "mid",
+      "kind": "normal",
+      "cost": 0,
+      "stun": 18,
+      "blockstun": 12,
+      "push": 22,
+      "hitstop": 7,
+      "boxes": [
+        {
+          "start": 5,
+          "end": 7,
+          "rect": [
+            28,
+            -220,
+            105,
+            58
+          ],
+          "group": 0
+        }
+      ],
+      "cancel": {
+        "start": 5,
+        "end": 15,
+        "confirm": "hit_or_block",
+        "targets": [
+          "special_punch",
+          "special_kick",
+          "super"
+        ]
+      }
+    },
+    "kick": {
+      "name": "急煞前踢",
+      "animation": "KICK",
+      "stance": "stand",
+      "startup": 9,
+      "active": 4,
+      "recovery": 17,
+      "damage": 68,
+      "level": "mid",
+      "kind": "normal",
+      "cost": 0,
+      "stun": 18,
+      "blockstun": 12,
+      "push": 22,
+      "hitstop": 7,
+      "boxes": [
+        {
+          "start": 9,
+          "end": 12,
+          "rect": [
+            30,
+            -180,
+            157,
+            66
+          ],
+          "group": 0
+        }
+      ],
+      "cancel": {
+        "start": 9,
+        "end": 20,
+        "confirm": "hit_or_block",
+        "targets": [
+          "special_punch",
+          "special_kick",
+          "super"
+        ]
+      }
+    },
+    "crouch_punch": {
+      "name": "低位截擊",
+      "animation": "CROUCH_PUNCH",
+      "stance": "crouch",
+      "startup": 5,
+      "active": 3,
+      "recovery": 9,
+      "damage": 35,
+      "level": "mid",
+      "kind": "normal",
+      "cost": 0,
+      "stun": 18,
+      "blockstun": 12,
+      "push": 22,
+      "hitstop": 7,
+      "boxes": [
+        {
+          "start": 5,
+          "end": 7,
+          "rect": [
+            25,
+            -110,
+            105,
+            45
+          ],
+          "group": 0
+        }
+      ],
+      "cancel": {
+        "start": 5,
+        "end": 15,
+        "confirm": "hit_or_block",
+        "targets": [
+          "special_punch",
+          "special_kick",
+          "super"
+        ]
+      }
+    },
+    "crouch_kick": {
+      "name": "巷弄掃腿",
+      "animation": "CROUCH_KICK",
+      "stance": "crouch",
+      "startup": 8,
+      "active": 4,
+      "recovery": 22,
+      "damage": 63,
+      "level": "low",
+      "kind": "normal",
+      "cost": 0,
+      "stun": 18,
+      "blockstun": 12,
+      "push": 22,
+      "hitstop": 7,
+      "boxes": [
+        {
+          "start": 8,
+          "end": 11,
+          "rect": [
+            20,
+            -45,
+            167,
+            42
+          ],
+          "group": 0
+        }
+      ],
+      "knockdown": 38
+    },
+    "air_punch": {
+      "name": "躍送肘擊",
+      "animation": "JUMP_PUNCH",
+      "stance": "air",
+      "startup": 5,
+      "active": 5,
+      "recovery": 12,
+      "damage": 48,
+      "level": "overhead",
+      "kind": "normal",
+      "cost": 0,
+      "stun": 18,
+      "blockstun": 12,
+      "push": 22,
+      "hitstop": 7,
+      "boxes": [
+        {
+          "start": 5,
+          "end": 9,
+          "rect": [
+            20,
+            -160,
+            118,
+            85
+          ],
+          "group": 0
+        }
+      ]
+    },
+    "air_kick": {
+      "name": "跨巷飛踢",
+      "animation": "JUMP_KICK",
+      "stance": "air",
+      "startup": 8,
+      "active": 7,
+      "recovery": 16,
+      "damage": 67,
+      "level": "overhead",
+      "kind": "normal",
+      "cost": 0,
+      "stun": 18,
+      "blockstun": 12,
+      "push": 22,
+      "hitstop": 7,
+      "boxes": [
+        {
+          "start": 8,
+          "end": 14,
+          "rect": [
+            20,
+            -135,
+            175,
+            80
+          ],
+          "group": 0
+        }
+      ]
+    },
+    "command": {
+      "name": "上門破防",
+      "animation": "KICK",
+      "stance": "stand",
+      "startup": 21,
+      "active": 3,
+      "recovery": 22,
+      "damage": 74,
+      "level": "overhead",
+      "kind": "command_normal",
+      "cost": 0,
+      "stun": 18,
+      "blockstun": 12,
+      "push": 22,
+      "hitstop": 7,
+      "boxes": [
+        {
+          "start": 21,
+          "end": 23,
+          "rect": [
+            20,
+            -245,
+            140,
+            125
+          ],
+          "group": 0
+        }
+      ]
+    },
+    "special_punch": {
+      "name": "破風急件",
+      "animation": "SPECIAL_PUNCH",
+      "stance": "stand",
+      "startup": 12,
+      "active": 6,
+      "recovery": 22,
+      "damage": 95,
+      "level": "mid",
+      "kind": "special",
+      "cost": 0,
+      "stun": 18,
+      "blockstun": 12,
+      "push": 22,
+      "hitstop": 7,
+      "boxes": [
+        {
+          "start": 12,
+          "end": 17,
+          "rect": [
+            20,
+            -215,
+            140,
+            95
+          ],
+          "group": 0
+        }
+      ],
+      "travel": 9,
+      "cancel": {
+        "start": 12,
+        "end": 22,
+        "confirm": "hit",
+        "targets": [
+          "super",
+          "awakening"
+        ]
+      },
+      "hurtboxes": [
+        {
+          "start": 0,
+          "end": 7,
+          "rects": [
+            [
+              -34,
+              -175,
+              85,
+              175
+            ]
+          ]
+        }
+      ]
+    },
+    "special_kick": {
+      "name": "路口迴旋",
+      "animation": "SPECIAL_KICK",
+      "stance": "stand",
+      "startup": 16,
+      "active": 8,
+      "recovery": 26,
+      "damage": 110,
+      "level": "mid",
+      "kind": "special",
+      "cost": 0,
+      "stun": 18,
+      "blockstun": 12,
+      "push": 22,
+      "hitstop": 7,
+      "boxes": [
+        {
+          "start": 16,
+          "end": 23,
+          "rect": [
+            -55,
+            -255,
+            230,
+            160
+          ],
+          "group": 0
+        }
+      ],
+      "knockdown": 32,
+      "status": {
+        "kind": "none",
+        "frames": 0
+      }
+    },
+    "super": {
+      "name": "極速送達",
+      "animation": "SUPER",
+      "stance": "stand",
+      "startup": 10,
+      "active": 18,
+      "recovery": 29,
+      "damage": 160,
+      "level": "mid",
+      "kind": "super",
+      "cost": 100,
+      "stun": 32,
+      "blockstun": 12,
+      "push": 22,
+      "hitstop": 7,
+      "boxes": [
+        {
+          "start": 10,
+          "end": 13,
+          "rect": [
+            20,
+            -235,
+            210,
+            150
+          ],
+          "group": 0
+        },
+        {
+          "start": 23,
+          "end": 27,
+          "rect": [
+            20,
+            -205,
+            245,
+            130
+          ],
+          "group": 1
+        }
+      ],
+      "cinema": "super",
+      "travel": 12,
+      "knockdown": 44,
+      "knockdown_group": 1
+    },
+    "awakening": {
+      "name": "使命必達",
+      "animation": "AWAKENING",
+      "stance": "stand",
+      "startup": 14,
+      "active": 23,
+      "recovery": 36,
+      "damage": 245,
+      "level": "mid",
+      "kind": "awakening",
+      "cost": 200,
+      "stun": 32,
+      "blockstun": 12,
+      "push": 22,
+      "hitstop": 7,
+      "boxes": [
+        {
+          "start": 14,
+          "end": 17,
+          "rect": [
+            -30,
+            -285,
+            330,
+            230
+          ],
+          "group": 0
+        },
+        {
+          "start": 32,
+          "end": 36,
+          "rect": [
+            -30,
+            -255,
+            365,
+            210
+          ],
+          "group": 1
+        }
+      ],
+      "cinema": "awakening",
+      "travel": 10,
+      "knockdown": 54,
+      "knockdown_group": 1
+    }
+  },
+  "visual": "res://data/visuals/kai.json",
+  "portrait": "res://assets/characters/kai/portrait.webp",
+  "rig": "res://scenes/rigs/kai.tscn",
+  "quote": "再遠的巷子，也一定送到。",
+  "hurtboxes": {
+    "stand": [
+      [
+        -22,
+        -315,
+        44,
+        62
+      ],
+      [
+        -35,
+        -253,
+        70,
+        143
+      ],
+      [
+        -36,
+        -110,
+        72,
+        110
+      ]
+    ],
+    "crouch": [
+      [
+        -25,
+        -205,
+        50,
+        55
+      ],
+      [
+        -43,
+        -150,
+        86,
+        150
+      ]
+    ],
+    "air": [
+      [
+        -22,
+        -315,
+        44,
+        60
+      ],
+      [
+        -34,
+        -255,
+        68,
+        165
+      ]
+    ]
+  },
+  "passives": []
+}
