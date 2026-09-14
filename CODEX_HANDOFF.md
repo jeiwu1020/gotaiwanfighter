@@ -15,6 +15,7 @@
 - Next safest task: timed third-character production at a fixed quality gate, then human Phaser/Godot A/B and iPhone/Android testing. Do not add menus merely to inflate parity.
 - Local Web: python tools/serve_web.py → http://127.0.0.1:8060. Re-export before prepare_web.py; do not run preparation twice on generated HTML.
 - Cloudflare: do not use Pages static hosting for this export; its WASM is above the static-file limit. Git deployment runs `npx wrangler deploy` using root `wrangler.toml` to deploy the R2-backed Worker only. Create `taiwanfighter-benchmark-assets` in the same account, then run `tools/export_web.ps1` and `tools/upload_cloudflare_r2.ps1` from an authenticated trusted machine. The upload script dry run passes; live R2 upload, Worker request, and mobile smoke remain unverified.
+- Vercel: recommended no-R2 remote route. `vercel.json` invokes `tools/vercel_build.sh` on Linux to download Godot 4.5.2 and templates, export `build/web`, then deploy static output. Vercel Hobby permits 100 MB static file uploads; this build is about 51 MiB and its WASM about 36 MiB. Vercel import/remote verification remains pending.
 
 ## Historical 0.1 record
 - Objective: from-zero Godot Kai vs Lucy, reference-faithful identity, extensible foundation, actually execute/play/fix; investigate Windows memory-read crash without assuming gameplay/GPU cause.

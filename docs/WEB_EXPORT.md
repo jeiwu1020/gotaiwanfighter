@@ -38,6 +38,14 @@ powershell -File tools/upload_cloudflare_r2.ps1
 
 另一條可行路線是自有 Nginx/Caddy 等靜態伺服器，沒有此單檔限制。未使用未驗證的 Pages gzip rewrite 來假稱可直接部署。
 
+## Vercel Git deployment
+
+Vercel Hobby 的靜態檔上傳上限是 100 MB；本輪約 36 MiB 的 WASM 與約 51 MiB 的完整 Web 輸出皆在範圍內。這是目前不啟用 Cloudflare R2 的推薦遠端部署路線。`vercel.json` 的 build command 會執行 `tools/vercel_build.sh`：在 Vercel Linux build container 下載官方 Godot 4.5.2 engine 和同版 export templates、輸出 `build/web`，再執行既有 safe-area shell 前處理。輸出仍不進 Git。
+
+操作：在 Vercel 匯入 `jeiwu1020/gotaiwanfighter`，Framework Preset 選 `Other`，保留 repository root，讓 `vercel.json` 提供 Build Command 與 Output Directory。第一次部署會下載 engine/templates，後續由 Vercel build cache 決定是否可重用。Vercel project 建好後，每次推送 `main` 都會重新 export/deploy；先以 preview URL 進行選單、音訊互動、Training、reload 與手機橫向驗證，再提升為 production。
+
+Vercel 的 WASM response 由 `vercel.json` 明確宣告 `application/wasm` 與 `nosniff`。這是部署設定，尚未宣稱已有遠端 Vercel 成功部署。
+
 ## 尚待實機確認
 
 - iPhone/iPad Safari 的 WebGL2、音訊恢復、IndexedDB clear save、記憶體回收／tab reload。
