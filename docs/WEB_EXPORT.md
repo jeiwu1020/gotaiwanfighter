@@ -25,7 +25,16 @@ single-thread export 不需要 SharedArrayBuffer，也不要求以 COOP/COEP 來
 
 不能直接說把現在資料夾丟上 Pages 就會成功：Pages 與 Workers 靜態資產每檔上限 25 MiB，原始 WASM 超過。官方建議較大檔案用 R2。見 [Pages limits](https://developers.cloudflare.com/pages/platform/limits/) 與 [Workers limits](https://developers.cloudflare.com/workers/platform/limits/)。
 
-交接路線：使用 R2 保存 build/web 內容，以同源 Worker 串流提供；deploy/cloudflare/worker.mjs 與 wrangler.example.toml 提供 binding／MIME／ETag 範本。**尚未遠端測試或部署**；bucket/account 必須由部署者選定並授权。上傳 WASM/PCK/JS 等資產後最後更新 HTML，保留舊版供回復。設定壓縮後應重新驗證啟動、音訊、存檔、reload 和 mobile。
+交接路線：使用 R2 保存 `build/web`，以同源 Worker 串流提供。根目錄的 `wrangler.toml` 是 Cloudflare Git deployment 的設定；它只部署 `deploy/cloudflare/worker.mjs`，不尋找或上傳未提交的 `build/web`。這避免 Git build 誤跑 `wrangler deploy` 時出現「Could not detect a directory containing static files」錯誤。
+
+首次部署：在同一 Cloudflare account 建立名稱為 `taiwanfighter-benchmark-assets` 的 R2 bucket，連接本 repo，build command 設為 `npx wrangler deploy`。Git build 只部署 Worker。之後在具備 Wrangler 登入或 API token 的受信任本機，依序執行：
+
+```powershell
+powershell -File tools/export_web.ps1
+powershell -File tools/upload_cloudflare_r2.ps1
+```
+
+上傳腳本保留相對路徑並最後上傳 `index.html`，降低 HTML 指到尚未完成資產版本的時間窗口。先用 `-DryRun` 檢視清單。bucket 名稱改動時，同時以 `-BucketName` 執行腳本並更新 `wrangler.toml`。這個流程仍**尚未遠端測試或部署**；設定壓縮後應重新驗證啟動、音訊、存檔、reload 和 mobile。
 
 另一條可行路線是自有 Nginx/Caddy 等靜態伺服器，沒有此單檔限制。未使用未驗證的 Pages gzip rewrite 來假稱可直接部署。
 

@@ -2,6 +2,8 @@ name = "taiwanfighter-benchmark"
 main = "deploy/cloudflare/worker.mjs"
 compatibility_date = "2026-09-13"
 
+# The Worker is deployed from Git.  Large Godot Web exports are uploaded
+# separately from a trusted local build by tools/upload_cloudflare_r2.ps1.
 [[r2_buckets]]
 binding = "GAME_ASSETS"
 bucket_name = "taiwanfighter-benchmark-assets"

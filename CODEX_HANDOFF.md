@@ -1,7 +1,7 @@
 # 武鬥台灣魂 — handoff
 
 - Status: 0.2 benchmark delivered for evaluation, 2026-09-14. Playable vertical slice, NOT full Phaser parity or a production-release recommendation.
-- Repository hygiene: initialized `main` as the standalone Godot research repo. Tracks only 0.2 source/data/assets/rig pipeline/tests/docs and seven representative QA visuals; excludes `.godot`, build/artifacts, engine/templates, Phaser reference, old 0.1 source/assets, and generated import files. No Git LFS required: staged source is about 41 MiB and has no file above 20 MiB.
+- Repository hygiene: standalone Godot research repo at `https://github.com/jeiwu1020/gotaiwanfighter`, branch `main`. Tracks only 0.2 source/data/assets/rig pipeline/tests/docs and seven representative QA visuals; excludes `.godot`, build/artifacts, engine/templates, Phaser reference, old 0.1 source/assets, and generated import files. No Git LFS required: staged source is about 41 MiB and has no file above 20 MiB.
 - Entry: scenes/main.tscn → src/game.gd. core/battle.gd / commands.gd / cpu.gd; modes/progress.gd; presentation/actor.gd / effects.gd / audio.gd / interface.gd. Fighter/move/visual/story/stage data are separate JSON.
 - Reference: PHASER_REFERENCE remains read-only; 617-file hash audit unchanged. Manifest/checklist reviewed first, then prioritized architecture/Story/Awakening/art. Source informs design, no Phaser/React/TypeScript runtime port.
 - Implemented: 22 moves, 26 raster states each, editable Kai 12-part/26-clip native rig with stance IK; Training, Story, CPU, local, four audio buses, actual Web export. Default raster reuses reference art; only the Kai rig is new production-workflow evidence.
@@ -14,6 +14,7 @@
 - Risks: rig seams/angles/hands, missing Lucy rig, missing original generation prompt provenance, no third-character total-cost evidence, shared cinematic staging, placeholder soundtrack, incomplete progression and device QA. This supports a research candidate, not a recommendation to migrate.
 - Next safest task: timed third-character production at a fixed quality gate, then human Phaser/Godot A/B and iPhone/Android testing. Do not add menus merely to inflate parity.
 - Local Web: python tools/serve_web.py → http://127.0.0.1:8060. Re-export before prepare_web.py; do not run preparation twice on generated HTML.
+- Cloudflare: do not use Pages static hosting for this export; its WASM is above the static-file limit. Git deployment runs `npx wrangler deploy` using root `wrangler.toml` to deploy the R2-backed Worker only. Create `taiwanfighter-benchmark-assets` in the same account, then run `tools/export_web.ps1` and `tools/upload_cloudflare_r2.ps1` from an authenticated trusted machine. The upload script dry run passes; live R2 upload, Worker request, and mobile smoke remain unverified.
 
 ## Historical 0.1 record
 - Objective: from-zero Godot Kai vs Lucy, reference-faithful identity, extensible foundation, actually execute/play/fix; investigate Windows memory-read crash without assuming gameplay/GPU cause.
